@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{%  block content %}
+
+    <h2>All Concerts</h2>
+    {%  for concert in object_list %}
+        <p><a href="{{ concert.get_absolute_url }}">{{  concert.artist }}</a> - {{ concert.venue }}</p>
+    {%  endfor %}
+
+{% endblock %}
