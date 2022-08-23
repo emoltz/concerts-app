@@ -1,1 +1,1 @@
-docker stop dc-postgres
+docker stop concerts-postgres
