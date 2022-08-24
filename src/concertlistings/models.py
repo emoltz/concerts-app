@@ -12,7 +12,6 @@ class Concert(models.Model):
     genre = models.CharField(max_length=240)
     price = models.DecimalField(decimal_places=2, max_digits=1000)
     ticket_url = models.TextField()
-    image = models.ImageField(upload_to='uploaded_images/', default=None, null=True, blank=True)
 
     def get_absolute_url(self):
         return reverse("concerts:concert-detail", kwargs={"id": self.id})
