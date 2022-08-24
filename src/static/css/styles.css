@@ -1,4 +1,4 @@
-:root{
+:root {
     --card1: #D9AE79;
     --card2: #A3B9C9;
     --card3: #8A9B86;
@@ -7,6 +7,9 @@
     --card2accent: #788894;
     --card3accent: #4C5949;
 
+    --cardwidth: 398px;
+    --cardheight: 93px;
+
     --date-text: 'Impact', sans-serif;
     --date-font-style: normal;
     --date-font-size: 46px;
@@ -14,13 +17,101 @@
     --date-line-height: 42px;
 }
 
-.card{
-    position: absolute;
+.card-1 {
+    position: relative;
     background-color: var(--card1);
-    box-shadow: 4px 4px 0 rgba(0,0,0,0.6);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
     border-radius: 6px;
+    display: flex;
+    width: var(--cardwidth);
+    height: var(--cardheight);
 
-    width: 398px;
+}
+
+.card-2 {
+    position: relative;
+    background-color: var(--card2);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    display: flex;
+    width: var(--cardwidth);
+    height: var(--cardheight);
+}
+
+.card-3 {
+    position: relative;
+    background-color: var(--card3);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    display: flex;
+    width: var(--cardwidth);
+    height: var(--cardheight);
+}
+
+.date {
+    font-family: 'Impact', sans-serif;
+    color: white;
+    width: 93px;
     height: 93px;
+    /*left: 141px;*/
+    /*top: 199px;*/
+    font-style: var(--date-font-style);
+
+    position: absolute;
+
+    font-size: var(--date-font-size);
+    font-weight: var(--date-font-weight);
+    line-height: var(--date-line-height);
+    background-color: var(--card1accent);
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
+    background-size: 300px 100px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.band-name {
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 94%;
+    text-align: center;
+    margin-top: 1px;
+    color: white;
+    position: absolute;
+    left: calc(var(--cardwidth) / 3.5);
+
+    width: 201px;
+    height: 68px;
+    /*left: 227px;*/
+    /*top: 337px;*/
+
+}
+
+.concert-location {
+    position: absolute;
+    width: 63px;
+    /*height: 34px;*/
+    font-size: 12px;
+
+    line-height: 34px;
+    left: calc(var(--cardwidth) / 6);
+
+
+
+    font-family: 'Impact', sans-serif;
+    font-style: normal;
+    color: white;
+
+    text-align: center;
+}
+
+.artist-image {
+    position: absolute;
+    width: 81px;
+    height: var(--cardheight);
+    left: calc(var(--cardwidth) - 81px);
 
 }

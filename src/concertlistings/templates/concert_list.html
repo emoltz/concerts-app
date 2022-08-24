@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+    <div class="container">
 
-<div class="card"></div>
+        <div class="card-1">
+            <div class="date">23 Sep</div>
+            <div class="band-name">Japanese Breakfast
+                <div class="concert-location">Terminal 5</div>
+            </div>
+            <img src="{% static 'images/pic2.png' %}" alt="Some artist" class="artist-image img">
+
+        </div>
+    </div>
+
 
 
 {% endblock %}
