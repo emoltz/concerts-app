@@ -4,7 +4,9 @@
 
     <h2>All Concerts</h2>
     {%  for concert in object_list %}
-        <p><a href="{{ concert.get_absolute_url }}">{{  concert.artist }}</a> - {{ concert.venue }}</p>
+{#        <p><a href="{{ concert.get_absolute_url }}">{{  concert.artist }}</a> - {{ concert.venue }}</p>#}
+        <p>{{  concert.title }} - <a href="{{  concert.url }}">Buy Tickets</a></p>
+        <p>{{ concert.artist }}, {{  concert.venue }} ({{ concert.date }})</p>
     {%  endfor %}
 
 {% endblock %}
