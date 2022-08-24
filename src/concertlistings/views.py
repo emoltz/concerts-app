@@ -5,12 +5,17 @@ from django.views.generic import (
     DetailView
 )
 
+from .util.api_service import ApiService
+
 from .models import Concert
+
+api_service = ApiService()
 
 
 class ConcertListView(ListView):
     template_name = 'concert_list.html'
-    queryset = Concert.objects.all()
+    queryset = api_service.get_concerts()
+    # queryset = Concert.objects.all()
 
 
 class ConcertDetailView(DetailView):
