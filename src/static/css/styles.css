@@ -62,13 +62,23 @@
     font-size: var(--date-font-size);
     font-weight: var(--date-font-weight);
     line-height: var(--date-line-height);
-    background-color: var(--card1accent);
+
     align-items: center;
     text-align: center;
     border-radius: 6px;
     background-size: 300px 100px;
     text-transform: uppercase;
     display: flex;
+}
+
+.accent-1{
+    background-color: var(--card1accent);
+}
+.accent-2{
+    background-color: var(--card2accent);
+}
+.accent-3{
+    background-color: var(--card3accent);
 }
 
 .band-name {
@@ -81,6 +91,7 @@
     margin-top: 1px;
     color: white;
     position: absolute;
+    top: 5px;
     left: calc(var(--cardwidth) / 3.5);
 
     width: 201px;
@@ -98,7 +109,7 @@
 
     line-height: 34px;
     left: calc(var(--cardwidth) / 6);
-
+    bottom: -25px;
 
 
     font-family: 'Impact', sans-serif;

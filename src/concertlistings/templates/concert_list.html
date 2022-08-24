@@ -1,14 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="card-1">
-            <div class="date">23 Sep</div>
+            <div class="accent-1 date">23 Sep</div>
             <div class="band-name">Japanese Breakfast
                 <div class="concert-location">Terminal 5</div>
             </div>
             <img src="{% static 'images/pic2.png' %}" alt="Some artist" class="artist-image img">
+
+        </div>
+     <div class="card-2">
+            <div class="accent-2 date ">06 Nov</div>
+            <div class="band-name">Your Mom
+                <div class="concert-location">Terminal 5</div>
+            </div>
+            <img src="{% static 'images/photo1.png' %}" alt="Some artist" class="artist-image img">
 
         </div>
     </div>
