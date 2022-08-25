@@ -26,6 +26,8 @@
     width: var(--cardwidth);
     height: var(--cardheight);
 
+    margin-bottom: 10px;
+
 }
 
 .card-2 {
@@ -104,10 +106,9 @@
 .concert-location {
     position: absolute;
     width: 63px;
-    /*height: 34px;*/
     font-size: 12px;
 
-    line-height: 34px;
+
     left: calc(var(--cardwidth) / 6);
     bottom: -25px;
 

@@ -38,4 +38,6 @@ class ApiService:
             genre=event['classifications'][0]['genre']['name'],
             price=(event['priceRanges'][0]['min']+event['priceRanges'][0]['max'])/2,
             ticket_url=event['url'],
+            image=event['images'][0]['url']
+
         )
