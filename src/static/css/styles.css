@@ -1,0 +1,140 @@
+:root {
+    --card1: #D9AE79;
+    --card2: #A3B9C9;
+    --card3: #8A9B86;
+
+    --card1accent: #B48F62;
+    --card2accent: #788894;
+    --card3accent: #4C5949;
+
+    --cardwidth: 398px;
+    --cardheight: 93px;
+
+    --date-text: 'Impact', sans-serif;
+    --date-font-style: normal;
+    --date-font-size: 46px;
+    --date-font-weight: 400;
+    --date-line-height: 42px;
+    --date-width: 93px;
+
+    --artist-image-width: 81px;
+}
+
+.card-1 {
+    position: relative;
+    background-color: var(--card1);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    display: flex;
+    width: var(--cardwidth);
+    height: var(--cardheight);
+
+    margin-bottom: 10px;
+
+}
+
+.card-2 {
+    position: relative;
+    background-color: var(--card2);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    display: flex;
+    width: var(--cardwidth);
+    height: var(--cardheight);
+
+    margin-bottom: 10px;
+}
+
+.card-3 {
+    position: relative;
+    background-color: var(--card3);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    display: flex;
+    width: var(--cardwidth);
+    height: var(--cardheight);
+}
+
+.date {
+    font-family: 'Impact', sans-serif;
+    color: white;
+    width: var(--date-width);
+    height: 93px;
+    /*left: 141px;*/
+    /*top: 199px;*/
+    font-style: var(--date-font-style);
+
+    position: absolute;
+
+    font-size: var(--date-font-size);
+    font-weight: var(--date-font-weight);
+    line-height: var(--date-line-height);
+
+    align-items: center;
+    text-align: center;
+    border-radius: 6px;
+    background-size: 300px 100px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.accent-1{
+    background-color: var(--card1accent);
+}
+.accent-2{
+    background-color: var(--card2accent);
+}
+.accent-3{
+    background-color: var(--card3accent);
+}
+
+.band-name {
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 94%;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    position: absolute;
+    align-items: center;
+    /*top: 5px;*/
+    left: var(--date-width);
+
+    width: 201px;
+    /*TODO calculate width based on width of artist photo*/
+    /*width: calc(var(--cardwidth) - var(--artist-image-width));*/
+    height: 68px;
+    /*left: 227px;*/
+    /*top: 337px;*/
+
+}
+
+.concert-location {
+    position: absolute;
+    width: 163px;
+    font-size: 12px;
+    align-items: center;
+
+
+    left: calc(var(--cardwidth) / 3.5);
+    bottom: 1px;
+
+
+    font-family: 'Impact', sans-serif;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.artist-image {
+    position: absolute;
+    width: var(--artist-image-width);
+    height: var(--cardheight);
+    left: calc(var(--cardwidth) - 81px);
+    object-fit: cover;
+    border-radius: 6px;
+
+}
