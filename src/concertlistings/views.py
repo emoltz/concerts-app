@@ -6,6 +6,7 @@ from django.views.generic import (
 )
 
 from .util.api_service import ApiService
+from .filters import *
 
 from .models import Concert
 
@@ -16,10 +17,7 @@ class ConcertListView(ListView):
     template_name = 'concert_list.html'
     queryset = api_service.get_concerts()
     # queryset = Concert.objects.all()
-
-    def filterArtist(self, artistName):
-        return self.queryset.filter(artist=artistName)
-
+    listing_filter = ListingFilter()
 
 
 class ConcertDetailView(DetailView):
