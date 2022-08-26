@@ -2,10 +2,12 @@
 
 {%  block content %}
 
-    <h2>{{ concert.artist }}</h2>
-    <p>
+    <h2>{{ concert.title }}</h2>
+    <div>
+        {{ concert.artist }}
         {{ concert.genre }}
         {{ concert.venue }}
-    </p>
+    </div>
+    <p><a href="{{ concert.ticket_url }}">Buy Tickets</a></p>
 
 {% endblock %}

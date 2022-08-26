@@ -21,5 +21,4 @@ urlpatterns = [
     path('', lambda request: redirect('/concerts', permanent=True)),
     path('concerts/', include('concertlistings.urls')),
     path('admin/', admin.site.urls),
-
 ]

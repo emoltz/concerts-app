@@ -7,7 +7,7 @@
             <div class="col-md-auto">
                 <div class="card-1">
                             <div class="accent-1 date">23 Sep</div>
-                            <div class="band-name">{{ concert.artist }}</div>
+                            <a href="/concerts/{{ concert.id }}"><div class="band-name">{{ concert.artist }}</div></a>
                             <div class="concert-location"> {{ concert.venue }}</div>
                             <img src="{{ concert.image }}" alt="Some artist" class="artist-image img">
                         </div>
@@ -17,5 +17,3 @@
     </div>
 
 {% endblock %}
-
-
