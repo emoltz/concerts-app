@@ -16,6 +16,8 @@
     --date-font-weight: 400;
     --date-line-height: 42px;
     --date-width: 93px;
+
+    --artist-image-width: 81px;
 }
 
 .card-1 {
@@ -99,6 +101,8 @@
     left: var(--date-width);
 
     width: 201px;
+    /*TODO calculate width based on width of artist photo*/
+    /*width: calc(var(--cardwidth) - var(--artist-image-width));*/
     height: 68px;
     /*left: 227px;*/
     /*top: 337px;*/
@@ -125,8 +129,10 @@
 
 .artist-image {
     position: absolute;
-    width: 81px;
+    width: var(--artist-image-width);
     height: var(--cardheight);
     left: calc(var(--cardwidth) - 81px);
+    object-fit: cover;
+    border-radius: 6px;
 
 }
