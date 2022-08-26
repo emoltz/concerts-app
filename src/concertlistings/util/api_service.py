@@ -36,7 +36,6 @@ class ApiService:
             venue=event['_embedded']['venues'][0]['name'],
             date=event['dates']['start']['dateTime'],
             genre=event['classifications'][0]['genre']['name'],
-            # TODO getting an odd error when uncommenting this:
             # price=(event['priceRanges'][0]['min']+event['priceRanges'][0]['max'])/2,
             ticket_url=event['url'],
             image=event['images'][0]['url']
