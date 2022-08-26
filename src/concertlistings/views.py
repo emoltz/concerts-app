@@ -34,6 +34,10 @@ class ConcertListView(ListView):
     # queryset = Concert.objects.all()
     listing_filter = ListingFilter()
 
+    def filterArtist(self, artistName):
+        return self.queryset.filter(artist=artistName)
+
+
 
 class ConcertDetailView(DetailView):
     template_name = 'concert_detail.html'
