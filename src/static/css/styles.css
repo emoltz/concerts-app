@@ -20,6 +20,10 @@
     --artist-image-width: 81px;
 }
 
+.main-content{
+    padding:50px;
+}
+
 .card-1 {
     position: relative;
     background-color: var(--card1);

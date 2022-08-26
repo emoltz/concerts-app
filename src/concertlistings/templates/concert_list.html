@@ -1,21 +1,22 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div class="container-fluid">
-    <div class="row justify-content-md-center">
-        {% for concert in object_list %}
+    <div class="container-fluid main-content">
+        <div class="row justify-content-md-center">
+            {% for concert in object_list %}
                 <div class="col-md-auto">
-            <a href="/concerts/{{ concert.id }}">
-                    <div class="card-1">
-                        <div class="accent-1 date">23 Sep</div>
-                        <div class="band-name">{{ concert.artist }}</div>
-                        <div class="concert-location"> {{ concert.venue }}</div>
-                        <img src="{{ concert.image }}" alt="Some artist" class="artist-image img">
-                    </div>
-            </a>
+                    <a href="/concerts/{{ concert.id }}">
+                        <div class="card-1">
+                            <div class="accent-1 date">23 Sep</div>
+                            <div class="band-name">{{ concert.artist }}</div>
+                            <div class="concert-location"> {{ concert.venue }}</div>
+                            <img src="{{ concert.image }}" alt="Some artist" class="artist-image img">
+                        </div>
+                    </a>
                 </div>
-        {% endfor %}
+            {% endfor %}
 
+        </div>
     </div>
 
 {% endblock %}
