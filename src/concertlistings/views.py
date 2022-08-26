@@ -16,6 +16,10 @@ class ConcertListView(ListView):
     template_name = 'concert_list.html'
     queryset = api_service.get_concerts()
 
+    def filterArtist(self, artistName):
+        return self.queryset.filter(artist=artistName)
+
+
 
 class ConcertDetailView(DetailView):
     template_name = 'concert_detail.html'
