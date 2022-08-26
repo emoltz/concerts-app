@@ -41,6 +41,8 @@
     display: flex;
     width: var(--cardwidth);
     height: var(--cardheight);
+
+    margin-bottom: 10px;
 }
 
 .card-3 {
