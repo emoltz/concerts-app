@@ -15,6 +15,7 @@
     --date-font-size: 46px;
     --date-font-weight: 400;
     --date-line-height: 42px;
+    --date-width: 93px;
 }
 
 .card-1 {
@@ -53,7 +54,7 @@
 .date {
     font-family: 'Impact', sans-serif;
     color: white;
-    width: 93px;
+    width: var(--date-width);
     height: 93px;
     /*left: 141px;*/
     /*top: 199px;*/
@@ -87,14 +88,15 @@
     font-family: 'Impact', sans-serif;
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 94%;
     text-align: center;
-    margin-top: 1px;
+    margin-top: 10px;
     color: white;
     position: absolute;
-    top: 5px;
-    left: calc(var(--cardwidth) / 3.5);
+    align-items: center;
+    /*top: 5px;*/
+    left: var(--date-width);
 
     width: 201px;
     height: 68px;
@@ -105,19 +107,20 @@
 
 .concert-location {
     position: absolute;
-    width: 63px;
+    width: 163px;
     font-size: 12px;
+    align-items: center;
 
 
-    left: calc(var(--cardwidth) / 6);
-    bottom: -25px;
+    left: calc(var(--cardwidth) / 3.5);
+    bottom: 1px;
 
 
     font-family: 'Impact', sans-serif;
     font-style: normal;
     color: white;
-
     text-align: center;
+    margin: 0 auto;
 }
 
 .artist-image {
