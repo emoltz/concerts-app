@@ -142,3 +142,13 @@
     border-radius: 6px;
 
 }
+
+.btn{
+    border:none !important;
+}
+
+.btn:hover{
+    /*background-color: #e1e0d5;*/
+    box-shadow: none !important;
+    border-radius: 6px;
+}
