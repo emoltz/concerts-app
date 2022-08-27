@@ -20,6 +20,13 @@
     --artist-image-width: 81px;
 }
 
+/*TODO add background something*/
+/*body{*/
+/*    background-image: url("../images/background1.png");*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+
 .main-content{
     padding:50px;
 }
@@ -151,4 +158,11 @@
     /*background-color: #e1e0d5;*/
     box-shadow: none !important;
     border-radius: 6px;
+}
+
+.btn-primary{
+    background-color: var(--card1);
+}
+.btn-primary:hover{
+    background-color: var(--card1accent);
 }

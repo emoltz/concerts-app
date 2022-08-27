@@ -41,8 +41,9 @@
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
                                     </button>
-                                    <a href="#">
-                                        <button type="button" class="btn btn-primary">Detailed View</button>
+                                    <a href="{{ concert.id }}">
+{#                                        TODO is there a way to get this to be {% url 'concert-detail' %} ?#}
+                                        <button type="button" class="btn btn-primary">More Info</button>
                                     </a>
 
                                 </div>

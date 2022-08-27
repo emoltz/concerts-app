@@ -38,6 +38,8 @@ lib
 .idea/**/gradle.xml
 .idea/**/libraries
 
+src/static/images/ae
+
 # File-based project format
 *.iws
 
