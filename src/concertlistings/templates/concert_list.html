@@ -1,11 +1,62 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container-fluid main-content">
+        <div class="row justify-content-md-center">
+            {% for concert in object_list %}
+                <div class="col-md-auto">
+                    {#                    <a href="/concerts/{{ concert.id }}">#}
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#concert-info">
+                        <div class="card-1">
+                            <div class="accent-1 date">23 Sep</div>
+                            <div class="band-name">{{ concert.artist }}</div>
+                            <div class="concert-location"> {{ concert.venue }}</div>
+                            <img src="{{ concert.image }}" alt="Some artist" class="artist-image img">
+                        </div>
+                        {#                    </a>#}
+                    </button>
 
-{%  block content %}
 
-    <h2>All Concerts</h2>
-    {%  for concert in object_list %}
-        <p>{{  concert.title }} - <a href="{{  concert.url }}">Buy Tickets</a></p>
-        <p>{{ concert.artist }}, {{  concert.venue }} ({{ concert.date }})</p>
-    {%  endfor %}
+                    <!-- Modal -->
+                    <div class="modal fade" id="concert-info" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Modal body -->
+                                    <!-- TODO this -->
+                                    {{concert.title}}
+                                    {{ concert.artist }}
+                                    {{ concert.description }}
+                                    {{ concert.date }}
+                                    {{ concert.time }}
+                                    {{ concert.venue }}
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                                    </button>
+                                    <a href="#">
+                                        <button type="button" class="btn btn-primary">Detailed View</button>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            {% endfor %}
+
+        </div>
+    </div>
 
 {% endblock %}
