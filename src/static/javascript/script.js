@@ -1,7 +1,7 @@
 //TODO if date is `SEP` then change to diff color, if `NOV` then change... etc.
 const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
-let cardMonthText = document.querySelector('.date').textContent.slice(-3);
+//ELEMENTS
 let cardDate = document.querySelector('.date');
 let card = document.querySelector('.card-1');
 let cardDatesAll = document.querySelectorAll('.date');

@@ -9,12 +9,12 @@
                     <!-- Button trigger modal -->
                     <button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#concert-info">
                         <div class="card card-color-1">
+                            {#  TODO make the date dynamic#}
                             <div class="accent-1 date">23 Sep</div>
                             <div class="band-name">{{ concert.artist }}</div>
                             <div class="concert-location"> {{ concert.venue }}</div>
                             <img src="{{ concert.image }}" alt="Some artist" class="artist-image img">
                         </div>
-                        {#                    </a>#}
                     </button>
 
 
@@ -31,13 +31,23 @@
                                 <div class="modal-body">
                                     <!-- Modal body -->
                                     <!-- TODO this -->
-                                    {{ concert.title }}
-                                    {{ concert.artist }}
-                                    {{ concert.description }}
-                                    {{ concert.date }}
-                                    {{ concert.time }}
-                                    {{ concert.venue }}
+                                    <div class="display-1">
+
+                                        {{ concert.title }}
+                                    </div>
+
+                                    <div class="">
+
+                                        {{ concert.description }}
+                                        {{ concert.date }}
+                                        {{ concert.time }}
+                                    </div>
+                                    <div class="">
+                                        {{ concert.venue }}
+                                    </div>
+
                                 </div>
+                                <!--FOOTER-->
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
                                     </button>
