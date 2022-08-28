@@ -31,39 +31,27 @@
     padding:50px;
 }
 
-.card-1 {
+.card {
     position: relative;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    display: flex;
+    width: var(--cardwidth);
+    height: var(--cardheight);
+
+    margin-bottom: 10px;
+}
+
+.card-color-1{
     background-color: var(--card1);
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
-    border-radius: 6px;
-    display: flex;
-    width: var(--cardwidth);
-    height: var(--cardheight);
-
-    margin-bottom: 10px;
-
 }
 
-.card-2 {
-    position: relative;
+.card-color-2{
     background-color: var(--card2);
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
-    border-radius: 6px;
-    display: flex;
-    width: var(--cardwidth);
-    height: var(--cardheight);
-
-    margin-bottom: 10px;
 }
 
-.card-3 {
-    position: relative;
+.card-color-3{
     background-color: var(--card3);
-    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.6);
-    border-radius: 6px;
-    display: flex;
-    width: var(--cardwidth);
-    height: var(--cardheight);
 }
 
 .date {
