@@ -31,7 +31,7 @@
                                 <div class="modal-body">
                                     <!-- Modal body -->
                                     <!-- TODO this -->
-                                    {{concert.title}}
+                                    {{ concert.title }}
                                     {{ concert.artist }}
                                     {{ concert.description }}
                                     {{ concert.date }}
@@ -42,7 +42,7 @@
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
                                     </button>
                                     <a href="{{ concert.id }}">
-{#                                        TODO is there a way to get this to be {% url 'concert-detail' %} ?#}
+                                        {# TODO is there a way to get this to be {% url 'concert-detail' %} ?#}
                                         <button type="button" class="btn btn-primary">More Info</button>
                                     </a>
 
