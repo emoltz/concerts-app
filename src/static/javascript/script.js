@@ -1,4 +1,3 @@
-//TODO if date is `SEP` then change to diff color, if `NOV` then change... etc.
 const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
 //ELEMENTS
@@ -8,6 +7,7 @@ let cardDatesAll = document.querySelectorAll('.date');
 const allCards = document.querySelectorAll('.card');
 
 //BASED ON MONTH
+//TODO change color based on month
 function changeColor(s) {
     let month = s.toUpperCase();
     if (month === months[8]) { //SEPTEMBER

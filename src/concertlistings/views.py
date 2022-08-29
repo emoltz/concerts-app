@@ -12,17 +12,28 @@ from .models import Concert
 api_service = ApiService()
 
 
+def concert_list_view(request):
+    queryset = api_service.get_concerts()
+    context = {
+        'object_list': queryset
+    }
+    queryset.sort(key=lambda x: x.date, reverse=False)
+    return render(request, 'concert_list.html', context=context)
+
+
+def concert_detail_view(request, id, *args, **kwargs):
+    context = {
+        "concert": api_service.get_concert_by_id(id)
+    }
+    return render(request, 'concert_detail.html', context=context)
+
+
 class ConcertListView(ListView):
     template_name = 'concert_list.html'
     queryset = api_service.get_concerts()
 
     def filterArtist(self, artistName):
         return self.queryset.filter(artist=artistName)
-
-
-    def filterArtist(self, artistName):
-        return self.queryset.filter(artist=artistName)
-
 
 
 class ConcertDetailView(DetailView):

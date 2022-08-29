@@ -3,8 +3,25 @@ import requests
 from concertlistings.models import Concert
 
 
-class ApiService:
+def getShortDate(date: Concert.date) -> str:
+    shortenedDate = ""
+    # date = Concerts.date
+    monthDigits = date[5:7]
+    months = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+    monthsWords = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    i = 0
+    for month in months:
+        if monthDigits == month:
+            shortenedDate += monthsWords[i]
+        i += 1
+    shortenedDate += " "
+    dateDigits = date[8:10]
+    shortenedDate += dateDigits
 
+    return shortenedDate
+
+
+class ApiService:
     token = '8Oil8TuZPSkCfN2bs0Vk8L3cbKb5dUgr'
     root_url = 'https://app.ticketmaster.com/discovery/v2'
     classification_id_music = 'KZFzniwnSyZfZ7v7nJ'
@@ -67,5 +84,6 @@ class ApiService:
             genre=genre,
             price=price,
             ticket_url=ticket_url,
-            image=image
+            image=image,
+            shortDate=getShortDate(date)
         )
