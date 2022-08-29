@@ -30,7 +30,6 @@ def concert_detail_view(request, id, *args, **kwargs):
 class ConcertListView(ListView):
     template_name = 'concert_list.html'
     queryset = api_service.get_concerts()
-    # queryset = Concert.objects.all()
 
 
 class ConcertDetailView(DetailView):

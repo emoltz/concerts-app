@@ -10,11 +10,11 @@ class ApiService:
     classification_id_music = 'KZFzniwnSyZfZ7v7nJ'
     events_endpoint = 'events'
 
-    def get_concerts(self, state_code: str = 'NY', page_size: int = 5) -> list[Concert]:
+    def get_concerts(self, state_code: str = 'NY', page: int = 0, size: int = 20) -> list[Concert]:
         concerts = []
         request_url = self.root_url + '/' + self.events_endpoint + '.json?apikey=' + self.token + \
-                      '&classificationId=' + self.classification_id_music + '&stateCode=' + state_code + '&size' + \
-                      str(page_size)
+                      '&classificationId=' + self.classification_id_music + '&stateCode=' + state_code \
+                      + '&page=' + str(page) + '&size=' + str(size)
         response = requests.get(request_url)
         for event in response.json()['_embedded']['events']:
             concerts.append(self.create_concert(event))
