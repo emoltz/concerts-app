@@ -64,4 +64,4 @@ function changeColorPairs() {
     }
 }
 
-changeColorPairs()
+// changeColorPairs()
