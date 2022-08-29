@@ -5,61 +5,19 @@
         <div class="row justify-content-md-center">
             {% for concert in object_list %}
                 <div class="col-md-auto">
-                                        <a href="/concerts/{{ concert.id }}">
-                    <!-- Button trigger modal -->
-                    {#      TODO issue: this isn't dynamically changing to the current clicked item!#}
-                    {#                    <button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#concert-info">#}
-                    <div class="card card-color-1 ">
-                        {#  TODO make the date dynamic#}
+                    <a href="/concerts/{{ concert.id }}">
+
+
+                        <div class="card card-color-1 ">
+                            {#  TODO make the date dynamic#}
                             <div class="accent-1 date">23 Sep</div>
-                            <div class="band-name">{{ concert.artist | truncatechars:25}}</div>
+                            <div class="band-name">{{ concert.artist | truncatechars:25 }}</div>
                             <div class="concert-location"> {{ concert.venue }}</div>
                             <img src="{{ concert.image }}" alt="Some artist" class="artist-image img">
-                    </div>
-                    {#                    </button>#}
-                                        </a>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="concert-info" tabindex="-1" aria-labelledby="exampleModalLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- Modal body -->
-                                    <!-- TODO this -->
-                                    <h1 class="">
-
-                                        {{ concert.title }}
-                                    </h1>
-
-                                    <h2 class="text-muted">
-
-                                        {{ concert.date }}
-
-                                    </h2>
-                                    <div class="">
-                                        {{ concert.venue }}
-                                    </div>
-
-                                </div>
-                                <!--FOOTER-->
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                                    </button>
-                                    <a href="{{ concert.id }}">
-                                        {# TODO is there a way to get this to be {% url 'concert-detail' %} ?#}
-                                        <button type="button" class="btn btn-primary">More Info</button>
-                                    </a>
-
-                                </div>
-                            </div>
                         </div>
-                    </div>
+                    </a>
+
+
                 </div>
 
 
