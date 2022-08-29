@@ -15,7 +15,6 @@ api_service = ApiService()
 class ConcertListView(ListView):
     template_name = 'concert_list.html'
     queryset = api_service.get_concerts()
-    # queryset = Concert.objects.all()
 
 
 class ConcertDetailView(DetailView):
